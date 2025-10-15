@@ -1,0 +1,159 @@
+/*
+    Last Modified: 2025-07-18 16:51
+    Author: Maxim
+    Contact: https://www.maxim.pe.kr
+    License: © 2025 Maxim. All Rights Reserved.
+*/
+
+/* =================================================================
+   Theme: UBHOLIC - Baby Pink & Beige
+================================================================= */
+
+:root {
+    /* -- Light Mode -- */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FFF8F5; /* Light Beige Pink */
+    --bg-navbar-animated: linear-gradient(45deg, #fff8f5, #ffffff, #fff8f5, #fdeee8);
+    --bg-card: #FFFFFF;
+    --bg-cta-button: #EBC4B8; /* Main Accent: Baby Pink/Beige */
+    --bg-cta-button-hover: #E5B8A9;
+    --bg-nav-icon-button: #D3AFA1;
+    --bg-nav-icon-button-hover: #C7A294;
+    --bg-lang-switcher: #FDEEE8;
+    --bg-lang-switcher-hover: #F8E2DA;
+    --bg-lang-switcher-active: #EBC4B8;
+    --bg-offer-badge: #EBC4B8;
+    --bg-overlay: rgba(0, 0, 0, 0.35);
+
+    --text-primary: #6D5D57; /* Soft dark brown for text */
+    --text-secondary: #8E7A73;
+    --text-headings: #5A4C47;
+    --text-accent: #EBC4B8;
+    --text-accent-hover: #E5B8A9;
+    --text-navbar: #5A4C47;
+    --text-lang-switcher: #D3AFA1;
+    --text-lang-switcher-active: #FFFFFF;
+    --text-cta-button: #FFFFFF;
+    --text-section-title-icon: #E6D4CF;
+    --text-home-title: #FFFFFF;
+    --text-home-subtitle: #F5F5F5;
+    
+    --border-card: #F8E2DA;
+    --border-navbar-bottom: #F8E2DA;
+    --border-section-heading-underline: #EBC4B8;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* -- Dark Mode -- */
+        --bg-primary: #2C2725;
+        --bg-secondary: #3B3431;
+        --bg-navbar-animated: linear-gradient(45deg, #3b3431, #2c2725, #3b3431, #4a403c);
+        --bg-card: #4A403C;
+        --bg-cta-button: #F5D2C7; /* Brighter pink for dark mode */
+        --bg-cta-button-hover: #F8DBD1;
+        --bg-nav-icon-button: #F5D2C7;
+        --bg-nav-icon-button-hover: #F8DBD1;
+        --bg-lang-switcher: #5A4C47;
+        --bg-lang-switcher-hover: #6D5D57;
+        --bg-lang-switcher-active: #F5D2C7;
+        --bg-offer-badge: #F5D2C7;
+
+        --text-primary: #F2EBE8;
+        --text-secondary: #D4C9C6;
+        --text-headings: #FFFFFF;
+        --text-accent: #F5D2C7;
+        --text-accent-hover: #F8DBD1;
+        --text-navbar: #FFFFFF;
+        --text-lang-switcher: #F2EBE8;
+        --text-lang-switcher-active: #2C2725;
+        --text-cta-button: #2C2725;
+        --text-nav-icon-button: #2C2725;
+        --text-section-title-icon: #8E7A73;
+
+        --border-card: #5A4C47;
+        --border-navbar-bottom: #5A4C47;
+        --border-section-heading-underline: #F5D2C7;
+    }
+}
+
+
+/* =================================================================
+   Custom Styles for UBHOLIC Site
+================================================================= */
+#home .home-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 12vw, 7rem); /* 모바일 폰트 크기 문제 해결 */
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+/* Options List Header (Subtitle in card) - Rounded Box Style */
+.options-list-header {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-cta-button);
+    background-color: var(--bg-cta-button);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-block-start: 25px;
+    margin-block-end: 20px;
+    border-block-end: none; /* Remove previous underline style */
+}
+.options-list-header:first-of-type {
+    margin-block-start: 0;
+}
+
+/* Common styles for all sub-items */
+.product-item.is-sub-item .item-label,
+.product-item.is-sub-item .item-value {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Remove border from contact list for cleaner look */
+.ui-contact-list {
+    border-block-start: none;
+}
+.ui-card .ui-contact-item:last-child {
+    border-block-end: none;
+}
+
+/* Adjust card content padding */
+.ui-card-content {
+    padding: 30px;
+}
+
+/* Contact & Services Item Layout */
+.ui-contact-item, .ui-services-list {
+    gap: 20px; /* Ensure minimum space between items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on narrow screens */
+}
+
+.ui-contact-item .item-label, .ui-services-list .item-label {
+    flex-shrink: 0; /* Prevent label from shrinking */
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ui-contact-item .item-value, .ui-services-list .item-value {
+    text-align: right; /* Align value text to the right */
+    word-break: keep-all; /* Prevent breaking in the middle of a word */
+    flex-grow: 1; /* Allow value to take up remaining space */
+}
+
+.ui-services-list {
+    display: flex;
+    align-items: flex-start;
+    padding-block: 16px;
+    padding-inline: 10px;
+}
+
+/* Arrow Color for Sub-Items */
+.accent-arrow {
+    font-weight: 100;
+    color: var(--text-accent);
+    margin-inline-end: 8px;
+}
