@@ -1,7 +1,7 @@
 <!--
-    Version: 2.1.0 (Page Express V2)
-    Last Modified: 2025-11-13
+    Last Modified: 2025-07-18 16:01
     Author: Maxim
+    Contact: https://www.maxim.pe.kr/contact
     License: © 2025 Maxim. All Rights Reserved.
 -->
 <!DOCTYPE html>
@@ -11,22 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
     <title data-lang="site_title">유비홀릭 - 프리미엄 에스테틱</title>
-    <meta name="description" data-lang="meta_description" content="유비홀릭(UBHOLIC)은 전문적인 관리로 당신의 일상에 활력과 아름다움을 선사하는 프리미엄 에스테틱입니다.">
+    <meta name="description" content="유비홀릭(UBHOLIC)은 전문적인 관리로 당신의 일상에 활력과 아름다움을 선사하는 프리미엄 에스테틱입니다.">
     <meta name="keywords" content="유비홀릭, 에스테틱, 피부관리, 속눈썹, 전주 피부관리, 익산 피부관리">
     <link rel="canonical" href="https://www.ubholic.com/">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="UBHOLIC">
     <meta property="og:url" content="https://www.ubholic.com/">
-    <meta property="og:title" data-lang="og_title" content="유비홀릭 - 프리미엄 에스테틱">
-    <meta property="og:description" data-lang="og_description" content="전문적인 관리로 당신의 일상에 활력과 아름다움을 선사합니다.">
+    <meta property="og:title" content="유비홀릭 - 프리미엄 에스테틱">
+    <meta property="og:description" content="전문적인 관리로 당신의 일상에 활력과 아름다움을 선사합니다.">
     <meta property="og:image" content="https://www.ubholic.com/section/home/01.jpg">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v2.css">
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v1.css">
     <link rel="stylesheet" href="./lay.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <script src="./lay.js" defer></script>
+    <script src="https://cdn.dam.so/_inc/express/page-v1.js?update=20250721" defer></script>
 
     <!-- SEO: JSON-LD for Rich Snippets -->
     <script type="application/ld+json">
@@ -58,231 +61,183 @@
     </script>
 </head>
 <body>
-    <nav class="pe-nav">
-        <div class="pe-nav__container">
-            <a href="#home" class="pe-nav__logo" data-lang="logo_text">UBHOLIC</a>
-            <div class="pe-nav__buttons">
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" data-lang="logo_text"></a>
+            <div class="nav-buttons">
                 <div id="lang-switcher">
                     <button data-lang-set="ko" class="active">KO</button>
                     <button data-lang-set="en">EN</button>
                 </div>
-                <a href="#branches" class="pe-nav__icon-button" aria-label="Location">
+                <a href="#location" class="nav-icon-button" aria-label="Location">
                     <span translate="no" class="material-symbols-outlined notranslate">location_on</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="pe-header">
-        <div class="pe-header__content js-parallax-content">
-            <h1 class="pe-header__title lay-home-logo">UBHOLIC</h1>
-            <p class="pe-header__subtitle" data-lang="home_subtitle"></p>
+    <header id="home" class="fullscreen">
+        <div class="slides-container">
+            <div class="slide active">
+                <img src="./section/home/01.jpg" alt="편안한 분위기의 에스테틱 내부 전경">
+            </div>
+            <div class="slide">
+                <img src="./section/home/02.jpg" alt="전문적인 케어 도구들이 정돈된 모습">
+            </div>
         </div>
+        <canvas class="canvas-stars"></canvas>
+        <div class="overlay has-dot-pattern"></div>
+        <div class="content js-parallax-content">
+            <h1 class="home-logo">UBHOLIC</h1>
+            <p class="subtitle" data-lang="home_subtitle"></p>
+        </div>
+        <div class="slide-indicators"></div>
     </header>
 
     <main>
-        <section id="overview" class="pe-section js-fade-in">
-            <div class="pe-container">
+        <section id="overview" class="section fade-in-section">
+            <div class="container">
                 <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">self_improvement</span>
-                    <span data-lang="overview_title"></span>
+                    <span data-lang="overview_title">일상에 스며드는 편안함과 아름다움</span>
                 </h2>
-                <p class="pe-section__description" data-lang="overview_desc"></p>
+                <p class="section-description" data-lang="overview_desc">유비홀릭은 고객 한 분 한 분에게 맞춘 전문적인 케어로 몸과 마음에 진정한 휴식과 활력을 선사하는 프리미엄 에스테틱입니다.</p>
             </div>
         </section>
 
-        <section id="services_skincare" class="pe-section pe-section--secondary js-fade-in">
-            <div class="pe-container">
+        <section id="services_skincare" class="section fade-in-section">
+            <div class="container">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">spa</span><span data-lang="skincare_title"></span></h2>
-                <p class="pe-section__description" data-lang="skincare_desc"></p>
-                <div class="pe-grid">
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_01.jpg" alt="테라피 관리를 받는 모습" class="pe-card__image">
+                <p class="section-description" data-lang="skincare_desc"></p>
+                <div class="card-grid">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_01.jpg" alt="테라피 관리를 받는 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="skincare_card_01_title"></h3>
-                            <h4 class="lay-options-header" data-lang="skincare_card_01_subtitle_01"></h4>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_therapy_face" data-product-type="price" data-dynamic-area></div>
-                            <h4 class="lay-options-header" data-lang="skincare_card_01_subtitle_02"></h4>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_therapy_body" data-product-type="price" data-dynamic-area></div>
-                        </div>
-                    </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_02.jpg" alt="집중 관리 케어를 받는 모습" class="pe-card__image">
-                        </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="skincare_card_02_title"></h3>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_intensive" data-product-type="price" data-dynamic-area></div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="skincare_card_01_title"></h3>
+                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_01"></h4>
+                            <div class="product-details" data-content-type="product" data-prefix="skincare_therapy_face" data-product-type="price" data-dynamic-area></div>
+                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_02"></h4>
+                            <div class="product-details" data-content-type="product" data-prefix="skincare_therapy_body" data-product-type="price" data-dynamic-area></div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_03.jpg" alt="통증 관리 케어를 받는 모습" class="pe-card__image">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_02.jpg" alt="집중 관리 케어를 받는 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="skincare_card_03_title"></h3>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_pain" data-product-type="price" data-dynamic-area></div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="skincare_card_02_title"></h3>
+                            <div class="product-details" data-content-type="product" data-prefix="skincare_intensive" data-product-type="price" data-dynamic-area></div>
+                        </div>
+                    </div>
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_03.jpg" alt="통증 관리 케어를 받는 모습" class="ui-card-image">
+                        </div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="skincare_card_03_title"></h3>
+                            <div class="product-details" data-content-type="product" data-prefix="skincare_pain" data-product-type="price" data-dynamic-area></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services_eyelash" class="pe-section js-fade-in">
-            <div class="pe-container">
+        <section id="services_eyelash" class="section fade-in-section">
+            <div class="container">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">visibility</span><span data-lang="eyelash_title"></span></h2>
-                <p class="pe-section__description" data-lang="eyelash_desc"></p>
-                <div class="pe-grid">
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_01.jpg" alt="속눈썹 연장 시술을 받는 모습" class="pe-card__image">
+                <p class="section-description" data-lang="eyelash_desc"></p>
+                <div class="card-grid">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_01.jpg" alt="속눈썹 연장 시술을 받는 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="eyelash_card_01_title"></h3>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_extension" data-product-type="price" data-dynamic-area></div>
-                        </div>
-                    </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_02.jpg" alt="속눈썹 펌 시술 후의 모습" class="pe-card__image">
-                        </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="eyelash_card_02_title"></h3>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_perm" data-product-type="price" data-dynamic-area></div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="eyelash_card_01_title"></h3>
+                            <div class="product-details" data-content-type="product" data-prefix="eyelash_extension" data-product-type="price" data-dynamic-area></div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_03.jpg" alt="속눈썹 복원 케어를 받는 모습" class="pe-card__image">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_02.jpg" alt="속눈썹 펌 시술 후의 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="eyelash_card_03_title"></h3>
-                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_restore" data-product-type="price" data-dynamic-area></div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="eyelash_card_02_title"></h3>
+                            <div class="product-details" data-content-type="product" data-prefix="eyelash_perm" data-product-type="price" data-dynamic-area></div>
+                        </div>
+                    </div>
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_03.jpg" alt="속눈썹 복원 케어를 받는 모습" class="ui-card-image">
+                        </div>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="eyelash_card_03_title"></h3>
+                            <div class="product-details" data-content-type="product" data-prefix="eyelash_restore" data-product-type="price" data-dynamic-area></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services_special" class="pe-section pe-section--secondary js-fade-in">
-            <div class="pe-container">
+        <section id="services_special" class="section fade-in-section">
+            <div class="container">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">auto_awesome</span><span data-lang="special_title"></span></h2>
-                <p class="pe-section__description" data-lang="special_desc"></p>
-                <div class="pe-grid pe-grid--cols-2">
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_01.jpg" alt="자연눈썹 시술을 받은 모습" class="pe-card__image">
+                <p class="section-description" data-lang="special_desc"></p>
+                <div class="card-grid grid-2">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_01.jpg" alt="자연눈썹 시술을 받은 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="special_card_01_title"></h3>
-                            <p class="pe-card__description" data-lang="special_card_01_desc"></p>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="special_card_01_title"></h3>
+                            <p class="ui-card-description" data-lang="special_card_01_desc"></p>
                         </div>
-                        <div class="pe-price-info">
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__value" data-lang="special_card_01_price"></span>
+                        <div class="price-info">
+                            <div class="price-item">
+                                <span class="price-value" data-lang="special_card_01_price"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_02.jpg" alt="화장눈썹 시술을 받은 모습" class="pe-card__image">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_02.jpg" alt="화장눈썹 시술을 받은 모습" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="special_card_02_title"></h3>
-                            <p class="pe-card__description" data-lang="special_card_02_desc"></p>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="special_card_02_title"></h3>
+                            <p class="ui-card-description" data-lang="special_card_02_desc"></p>
                         </div>
-                        <div class="pe-price-info">
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__value" data-lang="special_card_02_price"></span>
+                        <div class="price-info">
+                            <div class="price-item">
+                                <span class="price-value" data-lang="special_card_02_price"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_03.jpg" alt="아이라인 시술을 받은 눈매" class="pe-card__image">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_03.jpg" alt="아이라인 시술을 받은 눈매" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="special_card_03_title"></h3>
-                            <p class="pe-card__description" data-lang="special_card_03_desc"></p>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="special_card_03_title"></h3>
+                            <p class="ui-card-description" data-lang="special_card_03_desc"></p>
                         </div>
-                        <div class="pe-price-info">
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__value" data-lang="special_card_03_price"></span>
+                        <div class="price-info">
+                            <div class="price-item">
+                                <span class="price-value" data-lang="special_card_03_price"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_04.jpg" alt="매력적인 미인점 시술" class="pe-card__image">
+                    <div class="ui-card">
+                        <div class="ui-card-image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_04.jpg" alt="매력적인 미인점 시술" class="ui-card-image">
                         </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="special_card_04_title"></h3>
-                            <p class="pe-card__description" data-lang="special_card_04_desc"></p>
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="special_card_04_title"></h3>
+                            <p class="ui-card-description" data-lang="special_card_04_desc"></p>
                         </div>
-                        <div class="pe-price-info">
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__value" data-lang="special_card_04_price"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="branches" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">storefront</span><span data-lang="branches_title"></span></h2>
-                <p class="pe-section__description" data-lang="branches_desc"></p>
-                <div class="pe-grid pe-grid--cols-2">
-                    <div class="pe-card">
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="branches_branch_01_name"></h3>
-                            <div class="pe-contact-list">
-                                <div class="pe-contact-list__item">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_address"></strong>
-                                    <span class="pe-contact-list__value" data-lang="branches_branch_01_address"></span>
-                                </div>
-                                <div class="pe-contact-list__item">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_phone"></strong>
-                                    <a href="#" class="pe-contact-list__value" data-lang="branches_branch_01_phone" data-lang-href="branches_branch_01_phone_href"></a>
-                                </div>
-                                <div class="pe-contact-list__item lay-services-list">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_services"></strong>
-                                    <span class="pe-contact-list__value" data-lang="branches_branch_01_services"></span>
-                                </div>
-                            </div>
-                            <div class="pe-button-group">
-                                <a data-lang-href="branches_branch_01_url" class="pe-button" target="_blank" rel="noopener noreferrer">
-                                    <span translate="no" class="material-symbols-outlined notranslate">map</span>
-                                    <span data-lang="branches_button_text"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pe-card">
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title" data-lang="branches_branch_02_name"></h3>
-                             <div class="pe-contact-list">
-                                <div class="pe-contact-list__item">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_address"></strong>
-                                    <span class="pe-contact-list__value" data-lang="branches_branch_02_address"></span>
-                                </div>
-                                <div class="pe-contact-list__item">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_phone"></strong>
-                                    <a href="#" class="pe-contact-list__value" data-lang="branches_branch_02_phone" data-lang-href="branches_branch_02_phone_href"></a>
-                                </div>
-                                <div class="pe-contact-list__item lay-services-list">
-                                    <strong class="pe-contact-list__label" data-lang="branches_label_services"></strong>
-                                    <span class="pe-contact-list__value" data-lang="branches_branch_02_services"></span>
-                                </div>
-                            </div>
-                            <div class="pe-button-group">
-                                <a data-lang-href="branches_branch_02_url" class="pe-button" target="_blank" rel="noopener noreferrer">
-                                    <span translate="no" class="material-symbols-outlined notranslate">map</span>
-                                    <span data-lang="branches_button_text"></span>
-                                </a>
+                        <div class="price-info">
+                            <div class="price-item">
+                                <span class="price-value" data-lang="special_card_04_price"></span>
                             </div>
                         </div>
                     </div>
@@ -290,55 +245,68 @@
             </div>
         </section>
 
-        <section id="contact" class="pe-section pe-section--secondary js-fade-in">
-            <div class="pe-container">
-                <h2>
-                    <span translate="no" class="material-symbols-outlined notranslate">mail</span>
-                    <span data-lang="contact_title"></span>
-                </h2>
-                <p class="pe-section__description" data-lang="contact_desc"></p>
-                <form class="pe-form pe-contact-form" autocomplete="off">
-                    <input type="email" name="email" required class="pe-form__input" placeholder="Email" autocomplete="off">
-                    <div class="pe-form__textarea-wrapper">
-                        <textarea name="message" rows="5" required maxlength="1024" class="pe-form__textarea" placeholder="Message" autocomplete="off"></textarea>
-                        <div class="pe-form__char-counter">0/1024</div>
+        <section id="location" class="section fade-in-section">
+            <div class="container">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">storefront</span><span data-lang="location_title"></span></h2>
+                <p class="section-description" data-lang="location_desc"></p>
+                <div class="card-grid grid-2">
+                    <div class="ui-card">
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="location_branch_01_name"></h3>
+                            <div class="ui-contact-list">
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_address"></strong>
+                                    <span class="item-value" data-lang="location_branch_01_address"></span>
+                                </div>
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_phone"></strong>
+                                    <a href="#" class="item-value" data-lang="location_branch_01_phone" data-lang-href="location_branch_01_phone_href"></a>
+                                </div>
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_services"></strong>
+                                    <span class="item-value" data-lang="location_branch_01_services"></span>
+                                </div>
+                            </div>
+                            <div class="action-buttons-container">
+                                <a data-lang-href="location_branch_01_url" class="cta-button" target="_blank" rel="noopener noreferrer">
+                                    <span translate="no" class="material-symbols-outlined notranslate">map</span>
+                                    <span data-lang="location_button_text"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="pe-form__submit">
-                        <span class="pe-form__text" data-lang="contact_button"></span>
-                        <span class="pe-form__loader hidden">
-                            <span translate="no" class="material-symbols-outlined notranslate animate-spin">progress_activity</span>
-                        </span>
-                    </button>
-                    <div class="pe-form__status"></div>
-                </form>
+                    <div class="ui-card">
+                        <div class="ui-card-content">
+                            <h3 class="ui-card-title" data-lang="location_branch_02_name"></h3>
+                             <div class="ui-contact-list">
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_address"></strong>
+                                    <span class="item-value" data-lang="location_branch_02_address"></span>
+                                </div>
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_phone"></strong>
+                                    <a href="#" class="item-value" data-lang="location_branch_02_phone" data-lang-href="location_branch_02_phone_href"></a>
+                                </div>
+                                <div class="ui-contact-item">
+                                    <strong class="item-label" data-lang="location_label_services"></strong>
+                                    <span class="item-value" data-lang="location_branch_02_services"></span>
+                                </div>
+                            </div>
+                            <div class="action-buttons-container">
+                                <a data-lang-href="location_branch_02_url" class="cta-button" target="_blank" rel="noopener noreferrer">
+                                    <span translate="no" class="material-symbols-outlined notranslate">map</span>
+                                    <span data-lang="location_button_text"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section id="search" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2>
-                    <span translate="no" class="material-symbols-outlined notranslate">search</span>
-                    <span data-lang="search_title"></span>
-                </h2>
-                <p class="pe-section__description" data-lang="search_desc"></p>
-                <form class="pe-form pe-search-form" autocomplete="off">
-                    <input type="text" name="key" required class="pe-form__input" placeholder="Keyword" autocomplete="off">
-                    <button type="submit" class="pe-form__submit">
-                        <span class="pe-form__text" data-lang="search_button"></span>
-                        <span class="pe-form__loader hidden">
-                            <span translate="no" class="material-symbols-outlined notranslate animate-spin">progress_activity</span>
-                        </span>
-                    </button>
-                    <div class="pe-form__status"></div>
-                </form>
-                <div class="pe-form__result"></div>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="pe-footer">
-        <div class="pe-container">
+    <footer>
+        <div class="container">
             <p class="render-as-html" data-lang="copyright_text"></p>
         </div>
     </footer>
@@ -346,11 +314,5 @@
     <a href="#home" id="to-top-btn" class="hidden">
         <span translate="no" class="material-symbols-outlined notranslate">arrow_upward</span>
     </a>
-    
-    <div id="turnstile-container" style="position:absolute; top:-9999px; left:-9999px;"></div>
-
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
-    <script src="https://cdn.dam.so/_inc/express/page-v2.js" defer></script>
-    <script src="./lay.js" defer></script>
 </body>
 </html>
