@@ -27,7 +27,7 @@
     
     <!-- V2 Core Files -->
     <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v2.css">
-    <link rel="stylesheet" href="./lay.v2.css">
+    <link rel="stylesheet" href="./lay.css">
     
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
@@ -71,7 +71,7 @@
                 </div>
                 <!-- 
                   V1 .nav-icon-button (Location) was removed.
-                  It is now injected by lay.v2.js -> siteConfig.icon_buttons into the .pe-header area.
+                  It is now injected by lay.js -> siteConfig.icon_buttons into the .pe-header area.
                 -->
             </div>
         </div>
@@ -81,14 +81,14 @@
         <!--
           V2: Header content is minimal.
           Backgrounds (Slides, Canvas) and Overlays are injected by page-v2.js
-          based on the 'siteConfig' object in lay.v2.js.
+          based on the 'siteConfig' object in lay.js.
         -->
         <div class="pe-header__content js-parallax-content">
             <h1 class="pe-header__title">UBHOLIC</h1>
             <p class="pe-header__subtitle" data-lang="home_subtitle">Premium Esthetic</p>
             <!--
               V2: .ce-button-group (Canvas Icon Buttons) will be injected here by page-v2.js
-              based on 'siteConfig.icon_buttons' in lay.v2.js.
+              based on 'siteConfig.icon_buttons' in lay.js.
             -->
         </div>
     </header>
@@ -316,6 +316,6 @@
 
     <!-- V2 Scripts -->
     <script src="https://cdn.dam.so/_inc/express/page-v2.js" defer></script>
-    <script src="./lay.v2.js" defer></script>
+    <script src="./lay.js" defer></script>
 </body>
 </html>
