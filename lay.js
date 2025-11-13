@@ -18,7 +18,7 @@ const siteConfig = {
 
     // 2. Header Icon Buttons (Ported from V1)
     icon_buttons: [
-        { name: 'Location', icon: 'location_on', url: '#location' }
+        { name: 'Location', icon: 'location_on', url: '#branches' }
     ],
 
     // 3. API & Turnstile Settings (V2 Requirement)

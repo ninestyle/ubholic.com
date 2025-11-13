@@ -25,6 +25,8 @@
     --bg-lang-switcher-active: #EBC4B8;
     --bg-offer-badge: #EBC4B8;
     --bg-overlay: rgba(0, 0, 0, 0.35);
+    --bg-nav-icon-button-alpha: rgba(200, 150, 137, 0.2);
+    --bg-nav-icon-button-alpha-hover: rgba(200, 150, 137, 0.3);
 
     --text-primary: #6D5D57; /* Soft dark brown for text */
     --text-secondary: #8E7A73;
@@ -59,6 +61,8 @@
         --bg-lang-switcher-hover: #6D5D57;
         --bg-lang-switcher-active: #F5D2C7;
         --bg-offer-badge: #F5D2C7;
+        --bg-nav-icon-button-alpha: rgba(245, 210, 199, 0.15);
+        --bg-nav-icon-button-alpha-hover: rgba(245, 210, 199, 0.25);
 
         --text-primary: #F2EBE8;
         --text-secondary: #D4C9C6;
