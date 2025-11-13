@@ -1,7 +1,7 @@
 <!--
-    Last Modified: 2025-07-18 16:01
+    Version: 2.1.0 (V2 Refactored)
+    Last Modified: 2025-11-14
     Author: Maxim
-    Contact: https://www.maxim.pe.kr/contact
     License: © 2025 Maxim. All Rights Reserved.
 -->
 <!DOCTYPE html>
@@ -24,14 +24,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v1.css">
-    <link rel="stylesheet" href="./lay.css">
+    
+    <!-- V2 Core Files -->
+    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v2.css">
+    <link rel="stylesheet" href="./lay.v2.css">
+    
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-    <script src="./lay.js" defer></script>
-    <script src="https://cdn.dam.so/_inc/express/page-v1.js?update=20250721" defer></script>
-
-    <!-- SEO: JSON-LD for Rich Snippets -->
+    <!-- SEO: JSON-LD (No changes needed) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,241 +61,240 @@
     </script>
 </head>
 <body>
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo" data-lang="logo_text"></a>
-            <div class="nav-buttons">
+    <nav class="pe-nav">
+        <div class="pe-nav__container">
+            <a href="#home" class="pe-nav__logo" data-lang="logo_text">UBHOLIC</a>
+            <div class="pe-nav__buttons">
                 <div id="lang-switcher">
                     <button data-lang-set="ko" class="active">KO</button>
                     <button data-lang-set="en">EN</button>
                 </div>
-                <a href="#location" class="nav-icon-button" aria-label="Location">
-                    <span translate="no" class="material-symbols-outlined notranslate">location_on</span>
-                </a>
+                <!-- 
+                  V1 .nav-icon-button (Location) was removed.
+                  It is now injected by lay.v2.js -> siteConfig.icon_buttons into the .pe-header area.
+                -->
             </div>
         </div>
     </nav>
 
-    <header id="home" class="fullscreen">
-        <div class="slides-container">
-            <div class="slide active">
-                <img src="./section/home/01.jpg" alt="편안한 분위기의 에스테틱 내부 전경">
-            </div>
-            <div class="slide">
-                <img src="./section/home/02.jpg" alt="전문적인 케어 도구들이 정돈된 모습">
-            </div>
+    <header id="home" class="pe-header">
+        <!--
+          V2: Header content is minimal.
+          Backgrounds (Slides, Canvas) and Overlays are injected by page-v2.js
+          based on the 'siteConfig' object in lay.v2.js.
+        -->
+        <div class="pe-header__content js-parallax-content">
+            <h1 class="pe-header__title">UBHOLIC</h1>
+            <p class="pe-header__subtitle" data-lang="home_subtitle">Premium Esthetic</p>
+            <!--
+              V2: .ce-button-group (Canvas Icon Buttons) will be injected here by page-v2.js
+              based on 'siteConfig.icon_buttons' in lay.v2.js.
+            -->
         </div>
-        <canvas class="canvas-stars"></canvas>
-        <div class="overlay has-dot-pattern"></div>
-        <div class="content js-parallax-content">
-            <h1 class="home-logo">UBHOLIC</h1>
-            <p class="subtitle" data-lang="home_subtitle"></p>
-        </div>
-        <div class="slide-indicators"></div>
     </header>
 
     <main>
-        <section id="overview" class="section fade-in-section">
-            <div class="container">
+        <section id="overview" class="pe-section js-fade-in">
+            <div class="pe-container">
                 <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">self_improvement</span>
                     <span data-lang="overview_title">일상에 스며드는 편안함과 아름다움</span>
                 </h2>
-                <p class="section-description" data-lang="overview_desc">유비홀릭은 고객 한 분 한 분에게 맞춘 전문적인 케어로 몸과 마음에 진정한 휴식과 활력을 선사하는 프리미엄 에스테틱입니다.</p>
+                <p class="pe-section__description" data-lang="overview_desc">유비홀릭은 고객 한 분 한 분에게 맞춘 전문적인 케어로 몸과 마음에 진정한 휴식과 활력을 선사하는 프리미엄 에스테틱입니다.</p>
             </div>
         </section>
 
-        <section id="services_skincare" class="section fade-in-section">
-            <div class="container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">spa</span><span data-lang="skincare_title"></span></h2>
-                <p class="section-description" data-lang="skincare_desc"></p>
-                <div class="card-grid">
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_01.jpg" alt="테라피 관리를 받는 모습" class="ui-card-image">
+        <section id="services_skincare" class="pe-section js-fade-in">
+            <div class="pe-container">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">spa</span><span data-lang="skincare_title">피부관리</span></h2>
+                <p class="pe-section__description" data-lang="skincare_desc">전문가의 손길로 피부 본연의 건강한 빛을 되찾아 드립니다.</p>
+                <div class="pe-grid">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_01.jpg" alt="테라피 관리를 받는 모습" class="pe-card__image">
                         </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="skincare_card_01_title"></h3>
-                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_01"></h4>
-                            <div class="product-details" data-content-type="product" data-prefix="skincare_therapy_face" data-product-type="price" data-dynamic-area></div>
-                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_02"></h4>
-                            <div class="product-details" data-content-type="product" data-prefix="skincare_therapy_body" data-product-type="price" data-dynamic-area></div>
-                        </div>
-                    </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_02.jpg" alt="집중 관리 케어를 받는 모습" class="ui-card-image">
-                        </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="skincare_card_02_title"></h3>
-                            <div class="product-details" data-content-type="product" data-prefix="skincare_intensive" data-product-type="price" data-dynamic-area></div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="skincare_card_01_title">테라피</h3>
+                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_01">얼굴 테라피</h4>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_therapy_face" data-dynamic-area></div>
+                            <h4 class="options-list-header sub" data-lang="skincare_card_01_subtitle_02">전신 테라피</h4>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_therapy_body" data-dynamic-area></div>
                         </div>
                     </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/skincare_03.jpg" alt="통증 관리 케어를 받는 모습" class="ui-card-image">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_02.jpg" alt="집중 관리 케어를 받는 모습" class="pe-card__image">
                         </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="skincare_card_03_title"></h3>
-                            <div class="product-details" data-content-type="product" data-prefix="skincare_pain" data-product-type="price" data-dynamic-area></div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="skincare_card_02_title">집중관리</h3>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_intensive" data-dynamic-area></div>
+                        </div>
+                    </div>
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/skincare_03.jpg" alt="통증 관리 케어를 받는 모습" class="pe-card__image">
+                        </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="skincare_card_03_title">통증관리</h3>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="skincare_pain" data-dynamic-area></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services_eyelash" class="section fade-in-section">
-            <div class="container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">visibility</span><span data-lang="eyelash_title"></span></h2>
-                <p class="section-description" data-lang="eyelash_desc"></p>
-                <div class="card-grid">
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_01.jpg" alt="속눈썹 연장 시술을 받는 모습" class="ui-card-image">
+        <section id="services_eyelash" class="pe-section js-fade-in">
+            <div class="pe-container">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">visibility</span><span data-lang="eyelash_title">속눈썹</span></h2>
+                <p class="pe-section__description" data-lang="eyelash_desc">한 올 한 올 섬세한 터치로 당신의 눈매를 가장 아름답게 디자인합니다.</p>
+                <div class="pe-grid">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_01.jpg" alt="속눈썹 연장 시술을 받는 모습" class="pe-card__image">
                         </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="eyelash_card_01_title"></h3>
-                            <div class="product-details" data-content-type="product" data-prefix="eyelash_extension" data-product-type="price" data-dynamic-area></div>
-                        </div>
-                    </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_02.jpg" alt="속눈썹 펌 시술 후의 모습" class="ui-card-image">
-                        </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="eyelash_card_02_title"></h3>
-                            <div class="product-details" data-content-type="product" data-prefix="eyelash_perm" data-product-type="price" data-dynamic-area></div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="eyelash_card_01_title">연장</h3>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_extension" data-dynamic-area></div>
                         </div>
                     </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/eyelash_03.jpg" alt="속눈썹 복원 케어를 받는 모습" class="ui-card-image">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_02.jpg" alt="속눈썹 펌 시술 후의 모습" class="pe-card__image">
                         </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="eyelash_card_03_title"></h3>
-                            <div class="product-details" data-content-type="product" data-prefix="eyelash_restore" data-product-type="price" data-dynamic-area></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services_special" class="section fade-in-section">
-            <div class="container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">auto_awesome</span><span data-lang="special_title"></span></h2>
-                <p class="section-description" data-lang="special_desc"></p>
-                <div class="card-grid grid-2">
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_01.jpg" alt="자연눈썹 시술을 받은 모습" class="ui-card-image">
-                        </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="special_card_01_title"></h3>
-                            <p class="ui-card-description" data-lang="special_card_01_desc"></p>
-                        </div>
-                        <div class="price-info">
-                            <div class="price-item">
-                                <span class="price-value" data-lang="special_card_01_price"></span>
-                            </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="eyelash_card_02_title">펌</h3>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_perm" data-dynamic-area></div>
                         </div>
                     </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_02.jpg" alt="화장눈썹 시술을 받은 모습" class="ui-card-image">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/eyelash_03.jpg" alt="속눈썹 복원 케어를 받는 모습" class="pe-card__image">
                         </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="special_card_02_title"></h3>
-                            <p class="ui-card-description" data-lang="special_card_02_desc"></p>
-                        </div>
-                        <div class="price-info">
-                            <div class="price-item">
-                                <span class="price-value" data-lang="special_card_02_price"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_03.jpg" alt="아이라인 시술을 받은 눈매" class="ui-card-image">
-                        </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="special_card_03_title"></h3>
-                            <p class="ui-card-description" data-lang="special_card_03_desc"></p>
-                        </div>
-                        <div class="price-info">
-                            <div class="price-item">
-                                <span class="price-value" data-lang="special_card_03_price"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui-card">
-                        <div class="ui-card-image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/special_04.jpg" alt="매력적인 미인점 시술" class="ui-card-image">
-                        </div>
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="special_card_04_title"></h3>
-                            <p class="ui-card-description" data-lang="special_card_04_desc"></p>
-                        </div>
-                        <div class="price-info">
-                            <div class="price-item">
-                                <span class="price-value" data-lang="special_card_04_price"></span>
-                            </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="eyelash_card_03_title">복원</h3>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="eyelash_restore" data-dynamic-area></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="location" class="section fade-in-section">
-            <div class="container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">storefront</span><span data-lang="location_title"></span></h2>
-                <p class="section-description" data-lang="location_desc"></p>
-                <div class="card-grid grid-2">
-                    <div class="ui-card">
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="location_branch_01_name"></h3>
-                            <div class="ui-contact-list">
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_address"></strong>
-                                    <span class="item-value" data-lang="location_branch_01_address"></span>
+        <section id="services_special" class="pe-section js-fade-in">
+            <div class="pe-container">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">auto_awesome</span><span data-lang="special_title">스페셜 케어</span></h2>
+                <p class="pe-section__description" data-lang="special_desc">당신의 숨겨진 매력을 찾아 자신감을 더해주는 특별한 관리입니다.</p>
+                <div class="pe-grid pe-grid--cols-2">
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_01.jpg" alt="자연눈썹 시술을 받은 모습" class="pe-card__image">
+                        </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="special_card_01_title">자연눈썹</h3>
+                            <p class="pe-card__description" data-lang="special_card_01_desc">개개인의 얼굴형에 맞춰 가장 자연스러운 눈썹 결을 디자인합니다.</p>
+                        </div>
+                        <div class="pe-price-info">
+                            <div class="pe-price-info__item">
+                                <span class="pe-price-info__value" data-lang="special_card_01_price">180,000원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_02.jpg" alt="화장눈썹 시술을 받은 모습" class="pe-card__image">
+                        </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="special_card_02_title">화장눈썹</h3>
+                            <p class="pe-card__description" data-lang="special_card_02_desc">화장한 듯 자연스러운 음영을 주어 또렷한 인상을 완성합니다.</p>
+                        </div>
+                        <div class="pe-price-info">
+                            <div class="pe-price-info__item">
+                                <span class="pe-price-info__value" data-lang="special_card_02_price">200,000원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_03.jpg" alt="아이라인 시술을 받은 눈매" class="pe-card__image">
+                        </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="special_card_03_title">아이라인</h3>
+                            <p class="pe-card__description" data-lang="special_card_03_desc">점막을 꼼꼼히 채워 민낯에도 선명하고 깊은 눈매를 연출합니다.</p>
+                        </div>
+                        <div class="pe-price-info">
+                            <div class="pe-price-info__item">
+                                <span class="pe-price-info__value" data-lang="special_card_03_price">150,000원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger">
+                            <img src="./section/services/special_04.jpg" alt="매력적인 미인점 시술" class="pe-card__image">
+                        </div>
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="special_card_04_title">미인점</h3>
+                            <p class="pe-card__description" data-lang="special_card_04_desc">원하는 위치에 매력 포인트를 만들어 특별한 개성을 더합니다.</p>
+                        </div>
+                        <div class="pe-price-info">
+                            <div class="pe-price-info__item">
+                                <span class="pe-price-info__value" data-lang="special_card_04_price">30,000원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="pe-section js-fade-in">
+            <div class="pe-container">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">storefront</span><span data-lang="location_title">지점 안내</span></h2>
+                <p class="pe-section__description" data-lang="location_desc">가까운 유비홀릭에서 최상의 케어를 경험해 보세요.</p>
+                <div class="pe-grid pe-grid--cols-2">
+                    <div class="pe-card">
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="location_branch_01_name">전주본점</h3>
+                            <div class="pe-contact-list">
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_address">주소:</strong>
+                                    <span class="pe-contact-list__value" data-lang="location_branch_01_address">전주시 완산구 소태정3길 16-1</span>
                                 </div>
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_phone"></strong>
-                                    <a href="#" class="item-value" data-lang="location_branch_01_phone" data-lang-href="location_branch_01_phone_href"></a>
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_phone">연락처:</strong>
+                                    <a href="tel:0507-1336-1520" class="pe-contact-list__value" data-lang="location_branch_01_phone" data-lang-href="location_branch_01_phone_href">0507-1336-1520</a>
                                 </div>
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_services"></strong>
-                                    <span class="item-value" data-lang="location_branch_01_services"></span>
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_services">서비스:</strong>
+                                    <span class="pe-contact-list__value" data-lang="location_branch_01_services">피부관리, 속눈썹, 스페셜</span>
                                 </div>
                             </div>
-                            <div class="action-buttons-container">
-                                <a data-lang-href="location_branch_01_url" class="cta-button" target="_blank" rel="noopener noreferrer">
+                            <div class="pe-button-group">
+                                <a data-lang-href="location_branch_01_url" class="pe-button" target="_blank" rel="noopener noreferrer">
                                     <span translate="no" class="material-symbols-outlined notranslate">map</span>
-                                    <span data-lang="location_button_text"></span>
+                                    <span data-lang="location_button_text">지도에서 보기</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="ui-card">
-                        <div class="ui-card-content">
-                            <h3 class="ui-card-title" data-lang="location_branch_02_name"></h3>
-                             <div class="ui-contact-list">
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_address"></strong>
-                                    <span class="item-value" data-lang="location_branch_02_address"></span>
+                    <div class="pe-card">
+                        <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="location_branch_02_name">익산점</h3>
+                             <div class="pe-contact-list">
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_address">주소:</strong>
+                                    <span class="pe-contact-list__value" data-lang="location_branch_02_address">익산시 궁동로 96 애플빌딩 2층</span>
                                 </div>
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_phone"></strong>
-                                    <a href="#" class="item-value" data-lang="location_branch_02_phone" data-lang-href="location_branch_02_phone_href"></a>
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_phone">연락처:</strong>
+                                    <a href="tel:0507-1390-1189" class="pe-contact-list__value" data-lang="location_branch_02_phone" data-lang-href="location_branch_02_phone_href">0507-1390-1189</a>
                                 </div>
-                                <div class="ui-contact-item">
-                                    <strong class="item-label" data-lang="location_label_services"></strong>
-                                    <span class="item-value" data-lang="location_branch_02_services"></span>
+                                <div class="pe-contact-list__item">
+                                    <strong class="pe-contact-list__label" data-lang="location_label_services">서비스:</strong>
+                                    <span class="pe-contact-list__value" data-lang="location_branch_02_services">두피관리, 속눈썹, 스페셜</span>
                                 </div>
                             </div>
-                            <div class="action-buttons-container">
-                                <a data-lang-href="location_branch_02_url" class="cta-button" target="_blank" rel="noopener noreferrer">
+                            <div class="pe-button-group">
+                                <a data-lang-href="location_branch_02_url" class="pe-button" target="_blank" rel="noopener noreferrer">
                                     <span translate="no" class="material-symbols-outlined notranslate">map</span>
-                                    <span data-lang="location_button_text"></span>
+                                    <span data-lang="location_button_text">지도에서 보기</span>
                                 </a>
                             </div>
                         </div>
@@ -305,8 +304,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="pe-footer">
+        <div class="pe-container">
             <p class="render-as-html" data-lang="copyright_text"></p>
         </div>
     </footer>
@@ -314,5 +313,9 @@
     <a href="#home" id="to-top-btn" class="hidden">
         <span translate="no" class="material-symbols-outlined notranslate">arrow_upward</span>
     </a>
+
+    <!-- V2 Scripts -->
+    <script src="https://cdn.dam.so/_inc/express/page-v2.js" defer></script>
+    <script src="./lay.v2.js" defer></script>
 </body>
 </html>
