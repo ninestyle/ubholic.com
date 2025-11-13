@@ -1,9 +1,8 @@
 /*
-    Version: 2.0.0
-    Last Modified: 2025-11-13
+    Last Modified: 2025-07-18 16:51
     Author: Maxim
+    Contact: https://www.maxim.pe.kr
     License: © 2025 Maxim. All Rights Reserved.
-    Description: User styles for UBHOLIC, upgraded to PE V2 BEM.
 */
 
 /* =================================================================
@@ -25,8 +24,6 @@
     --bg-lang-switcher-active: #EBC4B8;
     --bg-offer-badge: #EBC4B8;
     --bg-overlay: rgba(0, 0, 0, 0.35);
-    --bg-nav-icon-button-alpha: rgba(200, 150, 137, 0.2);
-    --bg-nav-icon-button-alpha-hover: rgba(200, 150, 137, 0.3);
 
     --text-primary: #6D5D57; /* Soft dark brown for text */
     --text-secondary: #8E7A73;
@@ -38,8 +35,8 @@
     --text-lang-switcher-active: #FFFFFF;
     --text-cta-button: #FFFFFF;
     --text-section-title-icon: #E6D4CF;
-    --text-header-title: #FFFFFF;
-    --text-header-subtitle: #F5F5F5;
+    --text-home-title: #FFFFFF;
+    --text-home-subtitle: #F5F5F5;
     
     --border-card: #F8E2DA;
     --border-navbar-bottom: #F8E2DA;
@@ -61,8 +58,6 @@
         --bg-lang-switcher-hover: #6D5D57;
         --bg-lang-switcher-active: #F5D2C7;
         --bg-offer-badge: #F5D2C7;
-        --bg-nav-icon-button-alpha: rgba(245, 210, 199, 0.15);
-        --bg-nav-icon-button-alpha-hover: rgba(245, 210, 199, 0.25);
 
         --text-primary: #F2EBE8;
         --text-secondary: #D4C9C6;
@@ -84,18 +79,18 @@
 
 
 /* =================================================================
-   Custom Styles for UBHOLIC Site (V2 BEM Refactor)
+   Custom Styles for UBHOLIC Site
 ================================================================= */
-.pe-header__title.home-logo {
+#home .home-logo {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-size: clamp(3.5rem, 12vw, 7rem); /* 모바일 폰트 크기 문제 해결 */
     font-weight: 700;
     line-height: 1;
     letter-spacing: 2px;
 }
 
-/* User-defined BEM Block */
-.lay-options-header {
+/* Options List Header (Subtitle in card) - Rounded Box Style */
+.options-list-header {
     display: inline-block;
     font-size: 1rem;
     font-weight: 700;
@@ -105,50 +100,60 @@
     border-radius: 30px;
     margin-block-start: 25px;
     margin-block-end: 20px;
-    border-block-end: none;
+    border-block-end: none; /* Remove previous underline style */
 }
-.lay-options-header:first-of-type {
+.options-list-header:first-of-type {
     margin-block-start: 0;
 }
 
-/* V2: Sub-item style is now handled by core CSS (.pe-product-item--sub) */
-/* This file no longer needs to style sub-items */
+/* Common styles for all sub-items */
+.product-item.is-sub-item .item-label,
+.product-item.is-sub-item .item-value {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
 
-/* Overriding core component styles */
-.pe-contact-list {
+/* Remove border from contact list for cleaner look */
+.ui-contact-list {
     border-block-start: none;
 }
-.pe-card .pe-contact-list__item:last-child {
+.ui-card .ui-contact-item:last-child {
     border-block-end: none;
 }
-.pe-card__content {
+
+/* Adjust card content padding */
+.ui-card-content {
     padding: 30px;
 }
 
-/* Contact & Services Item Layout (V2 BEM) */
-.pe-contact-list__item, 
-.lay-services-list {
-    gap: 20px;
-    flex-wrap: wrap;
+/* Contact & Services Item Layout */
+.ui-contact-item, .ui-services-list {
+    gap: 20px; /* Ensure minimum space between items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on narrow screens */
 }
 
-.lay-services-list {
+.ui-contact-item .item-label, .ui-services-list .item-label {
+    flex-shrink: 0; /* Prevent label from shrinking */
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ui-contact-item .item-value, .ui-services-list .item-value {
+    text-align: right; /* Align value text to the right */
+    word-break: keep-all; /* Prevent breaking in the middle of a word */
+    flex-grow: 1; /* Allow value to take up remaining space */
+}
+
+.ui-services-list {
     display: flex;
     align-items: flex-start;
     padding-block: 16px;
     padding-inline: 10px;
 }
 
-.pe-contact-list__label, 
-.lay-services-list .pe-contact-list__label {
-    flex-shrink: 0;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.pe-contact-list__value,
-.lay-services-list .pe-contact-list__value {
-    text-align: right;
-    word-break: keep-all;
-    flex-grow: 1;
+/* Arrow Color for Sub-Items */
+.accent-arrow {
+    font-weight: 100;
+    color: var(--text-accent);
+    margin-inline-end: 8px;
 }
