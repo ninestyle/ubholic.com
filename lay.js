@@ -11,7 +11,7 @@ const siteConfig = {
     canvas_image_type: 'cover',
     canvas_image_count: 2,
     canvas_image_path: './section/home/',
-    canvas_image_format: jpg,
+    canvas_image_format: 'jpg',
     canvas_image_slide: 5,
     canvas_indicators: true,
     icon_buttons: [
