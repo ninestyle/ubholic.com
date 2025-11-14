@@ -25,13 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     
-    <!-- V2 Core Files -->
     <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v2.css">
     <link rel="stylesheet" href="./lay.css">
     
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-    <!-- SEO: JSON-LD (No changes needed) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,27 +67,14 @@
                     <button data-lang-set="ko" class="active">KO</button>
                     <button data-lang-set="en">EN</button>
                 </div>
-                <!-- 
-                  V1 .nav-icon-button (Location) was removed.
-                  It is now injected by lay.js -> siteConfig.icon_buttons into the .pe-header area.
-                -->
             </div>
         </div>
     </nav>
 
     <header id="home" class="pe-header">
-        <!--
-          V2: Header content is minimal.
-          Backgrounds (Slides, Canvas) and Overlays are injected by page-v2.js
-          based on the 'siteConfig' object in lay.js.
-        -->
         <div class="pe-header__content js-parallax-content">
             <h1 class="pe-header__title">UBHOLIC</h1>
             <p class="pe-header__subtitle" data-lang="home_subtitle">Premium Esthetic</p>
-            <!--
-              V2: .ce-button-group (Canvas Icon Buttons) will be injected here by page-v2.js
-              based on 'siteConfig.icon_buttons' in lay.js.
-            -->
         </div>
     </header>
 
@@ -303,7 +288,6 @@
             </div>
         </section>
 
-        <!-- V2: Added Contact Section -->
         <section id="contact" class="pe-section js-fade-in">
             <div class="pe-container">
                 <h2>
@@ -329,7 +313,6 @@
             </div>
         </section>
 
-        <!-- V2: Added Search Section -->
         <section id="search" class="pe-section js-fade-in">
             <div class="pe-container">
                 <h2>
@@ -362,7 +345,6 @@
         <span translate="no" class="material-symbols-outlined notranslate">arrow_upward</span>
     </a>
 
-    <!-- V2 Scripts -->
     <script src="https://cdn.dam.so/_inc/express/page-v2.js" defer></script>
     <script src="./lay.js" defer></script>
 </body>

@@ -5,17 +5,12 @@
     License: © 2025 Maxim. All Rights Reserved.
 */
 
-/* =================================================================
-   Theme: UBHOLIC - Baby Pink & Beige
-================================================================= */
-
 :root {
-    /* -- Light Mode -- */
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FFF8F5; /* Light Beige Pink */
+    --bg-secondary: #FFF8F5;
     --bg-navbar-animated: linear-gradient(45deg, #fff8f5, #ffffff, #fff8f5, #fdeee8);
     --bg-card: #FFFFFF;
-    --bg-button: #EBC4B8; /* Main Accent: Baby Pink/Beige */
+    --bg-button: #EBC4B8;
     --bg-button-hover: #E5B8A9;
     --bg-lang-switcher: #FDEEE8;
     --bg-lang-switcher-hover: #F8E2DA;
@@ -23,7 +18,7 @@
     --bg-offer-badge: #EBC4B8;
     --bg-overlay: rgba(0, 0, 0, 0.35);
 
-    --text-primary: #6D5D57; /* Soft dark brown for text */
+    --text-primary: #6D5D57;
     --text-secondary: #8E7A73;
     --text-headings: #5A4C47;
     --text-accent: #EBC4B8;
@@ -40,8 +35,7 @@
     --border-navbar-bottom: #F8E2DA;
     --border-section-heading-underline: #EBC4B8;
     
-    /* V2 Canvas Button Vars */
-    --ce-canvas-rgb: 235, 196, 184; /* EBC4B8 */
+    --ce-canvas-rgb: 235, 196, 184;
     --ce-text-color: #FFFFFF;
     --ce-input-bg-color: rgba(var(--ce-canvas-rgb), 0.2);
     --ce-input-border-color: rgba(var(--ce-canvas-rgb), 0.3);
@@ -49,12 +43,11 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* -- Dark Mode -- */
         --bg-primary: #2C2725;
         --bg-secondary: #3B3431;
         --bg-navbar-animated: linear-gradient(45deg, #3b3431, #2c2725, #3b3431, #4a403c);
         --bg-card: #4A403C;
-        --bg-button: #F5D2C7; /* Brighter pink for dark mode */
+        --bg-button: #F5D2C7;
         --bg-button-hover: #F8DBD1;
         --bg-lang-switcher: #5A4C47;
         --bg-lang-switcher-hover: #6D5D57;
@@ -76,24 +69,19 @@
         --border-navbar-bottom: #5A4C47;
         --border-section-heading-underline: #F5D2C7;
         
-        /* V2 Canvas Button Vars */
-        --ce-canvas-rgb: 245, 210, 199; /* F5D2C7 */
+        --ce-canvas-rgb: 245, 210, 199;
     }
 }
 
 
-/* =================================================================
-   Custom Styles for UBHOLIC Site (Refactored for V2)
-================================================================= */
-.pe-header__title { /* V1: #home .home-logo */
+.pe-header__title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 12vw, 7rem); /* 모바일 폰트 크기 문제 해결 */
+    font-size: clamp(3.5rem, 12vw, 7rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 2px;
 }
 
-/* Options List Header (Subtitle in card) - Rounded Box Style */
 .options-list-header {
     display: inline-block;
     font-size: 1rem;
@@ -104,54 +92,46 @@
     border-radius: 30px;
     margin-block-start: 25px;
     margin-block-end: 20px;
-    border-block-end: none; /* Remove previous underline style */
+    border-block-end: none;
 }
 .options-list-header:first-of-type {
     margin-block-start: 0;
 }
 
-/* Common styles for all sub-items */
-/* V1: .product-item.is-sub-item */
 .pe-product-list__item--sub .pe-product-list__label,
 .pe-product-list__item--sub .pe-product-list__value {
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
-/* V1: .accent-arrow rule is no longer needed. V2 Core CSS handles this. */
 
-
-/* Remove border from contact list for cleaner look */
-.pe-contact-list { /* V1: .ui-contact-list */
+.pe-contact-list {
     border-block-start: none;
 }
-.pe-card .pe-contact-list__item:last-child { /* V1: .ui-card .ui-contact-item:last-child */
+.pe-card .pe-contact-list__item:last-child {
     border-block-end: none;
 }
 
-/* Adjust card content padding */
-.pe-card__content { /* V1: .ui-card-content */
+.pe-card__content {
     padding: 30px;
 }
 
-/* Contact & Services Item Layout */
-.pe-contact-list__item, .ui-services-list { /* V1: .ui-contact-item */
-    gap: 20px; /* Ensure minimum space between items */
-    flex-wrap: wrap; /* Allow items to wrap to the next line on narrow screens */
+.pe-contact-list__item, .ui-services-list {
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.pe-contact-list__item .pe-contact-list__label, .ui-services-list .item-label { /* V1: .ui-contact-item .item-label */
-    flex-shrink: 0; /* Prevent label from shrinking */
+.pe-contact-list__item .pe-contact-list__label, .ui-services-list .item-label {
+    flex-shrink: 0;
     font-weight: 600;
     color: var(--text-primary);
 }
 
-.pe-contact-list__item .pe-contact-list__value, .ui-services-list .item-value { /* V1: .ui-contact-item .item-value */
-    text-align: right; /* Align value text to the right */
-    word-break: keep-all; /* Prevent breaking in the middle of a word */
-    flex-grow: 1; /* Allow value to take up remaining space */
+.pe-contact-list__item .pe-contact-list__value, .ui-services-list .item-value {
+    text-align: right;
+    word-break: keep-all;
+    flex-grow: 1;
 }
 
-/* V1: .ui-services-list was defined but not used in HTML. Kept for reference. */
 .ui-services-list {
     display: flex;
     align-items: flex-start;

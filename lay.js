@@ -5,35 +5,27 @@
     License: © 2025 Maxim. All Rights Reserved.
 */
 
-// --- V2 siteConfig Object ---
 const siteConfig = {
-    // Canvas Effect (from V1 <canvas class="canvas-stars">)
     canvas_effect: 'starsEffect',
-    
-    // V2: Add overlay config to fix dot pattern bug
     canvas_overlay: 'dotted',
-    
-    // Image Slider (from V1 .slides-container)
     canvas_image_type: 'cover',
     canvas_image_count: 2,
+    canvas_image_slide: 5,
     canvas_image_path: './section/home/',
-    canvas_image_slide: 5, // V1 default was 5 seconds
-    canvas_indicators: true, // from V1 .slide-indicators
+    canvas_image_format: 'jpg',
+    canvas_indicators: true,
 
-    // Icon Buttons (from V1 .nav-icon-button)
     icon_buttons: [
         { name: 'Location', icon: 'location_on', url: '#location' }
     ],
     
-    // API Keys (Add Turnstile Key for new forms)
     TURNSTILE_SITE_KEY: '0x4AAAAAAB1Gk9ll6ulH4ZDi'
 };
 
-// --- starsEffect Function (Extracted from V1 page-v1.js) ---
 const starsEffect = {
     init: (headerElement) => {
         const canvas = document.createElement('canvas');
-        canvas.id = 'ce-bg-canvas'; // V2 ID
+        canvas.id = 'ce-bg-canvas';
         headerElement.prepend(canvas);
 
         const ctx = canvas.getContext('2d');
@@ -97,9 +89,7 @@ const starsEffect = {
     }
 };
 
-// --- Initialize Page Express V2 ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Register the custom effect before initializing
     if (typeof PE_V2 !== 'undefined') {
         PE_V2.registerEffect('starsEffect', starsEffect);
         PE_V2.init(siteConfig);
