@@ -146,10 +146,7 @@
         "special_card_03_title": "아이라인",
         "special_card_03_price": "150,000원",
         "special_card_04_title": "미인점",
-        "special_card_04_price": "30,000원",
-        "contact_placeholder_email": "Your Email",
-        "contact_placeholder_message": "Your Message",
-        "search_placeholder": "Enter keyword..."
+        "special_card_04_price": "30,000원"
     },
     "en": {
         "site_title": "UBHOLIC - Premium Esthetic",
@@ -170,13 +167,7 @@
         "location_label_address": "Address:",
         "location_label_phone": "Phone:",
         "location_label_services": "Services:",
-        "location_button_text": "View on Map",
-        "contact_title": "Contact Us",
-        "contact_desc": "Please feel free to reach out with any questions.",
-        "contact_button": "Send Message",
-        "search_title": "Search",
-        "search_desc": "Find the information you need from our site.",
-        "search_button": "Search"
+        "location_button_text": "View on Map"
     },
     "ko": {
         "site_title": "유비홀릭 - 프리미엄 에스테틱",
@@ -197,12 +188,6 @@
         "location_label_address": "주소:",
         "location_label_phone": "연락처:",
         "location_label_services": "서비스:",
-        "location_button_text": "지도에서 보기",
-        "contact_title": "문의하기",
-        "contact_desc": "궁금한 점은 언제든지 편하게 문의해 주세요.",
-        "contact_button": "메시지 보내기",
-        "search_title": "검색",
-        "search_desc": "사이트 내에서 필요한 정보를 찾아보세요.",
-        "search_button": "검색"
+        "location_button_text": "지도에서 보기"
     }
 }
