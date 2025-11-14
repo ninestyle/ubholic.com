@@ -10,7 +10,7 @@ const siteConfig = {
     canvas_overlay: 'dotted',
     canvas_image_type: 'cover',
     canvas_image_count: 2,
-    canvas_image_slide: 5,
+    canvas_image_slide: 10,
     canvas_image_path: './section/home/',
     canvas_image_format: 'jpg',
     canvas_indicators: true,
