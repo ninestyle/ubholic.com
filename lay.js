@@ -16,7 +16,7 @@ const siteConfig = {
     canvas_indicators: true,
 
     icon_buttons: [
-        { name: 'Location', icon: 'location_on', url: '#location' }
+        { name: 'Location', icon: 'location_on', url: '#location' },
         { name: 'Contact', icon: 'contact_support', url: '#contact' }
     ],
     
