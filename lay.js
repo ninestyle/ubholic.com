@@ -19,7 +19,8 @@ const siteConfig = {
         { name: 'Location', icon: 'location_on', url: '#location' }
     ],
     
-    TURNSTILE_SITE_KEY: '0x4AAAAAAB1Gk9ll6ulH4ZDi'
+    API_BASE_PATH: 'https://maxim.kr/api',
+    TURNSTILE_SITE_KEY: '0x4AAAAAAB1Gk9ll6ulH4ZDi',
 };
 
 const starsEffect = {
