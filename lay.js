@@ -20,8 +20,8 @@ const siteConfig = {
         { name: 'Contact', icon: 'contact_support', url: '#contact' }
     ],
     
-    API_BASE_PATH: 'https://www.maxim.pe.kr/api',
-    TURNSTILE_SITE_KEY: '0x4AAAAAAB1Gk9ll6ulH4ZDi',
+    API_BASE_PATH: 'https://agency.maxim.kr/api',
+    TURNSTILE_SITE_KEY: '0x4AAAAAACA4Lf2CF7viYhbJ',
 };
 
 const starsEffect = {
