@@ -19,7 +19,7 @@ const siteConfig = {
         { name: 'Location', icon: 'location_on', url: '#location' }
     ],
     
-    API_BASE_PATH: 'https://maxim.kr/api',
+    API_BASE_PATH: 'https://www.maxim.pe.kr/api',
     TURNSTILE_SITE_KEY: '0x4AAAAAAB1Gk9ll6ulH4ZDi',
 };
 
