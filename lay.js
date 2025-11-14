@@ -17,6 +17,7 @@ const siteConfig = {
 
     icon_buttons: [
         { name: 'Location', icon: 'location_on', url: '#location' }
+        { name: 'Contact', icon: 'contact_support', url: '#contact' }
     ],
     
     API_BASE_PATH: 'https://www.maxim.pe.kr/api',
