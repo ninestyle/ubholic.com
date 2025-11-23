@@ -1,11 +1,16 @@
 /*
-    Version: 2.1.0 (V2 Refactored)
-    Last Modified: 2025-11-14
+    Version: 3.0.0 (V3 Refactored)
+    Framework: User Configuration (Tier 3)
+    Last Modified: 2025-11-23
     Author: Maxim
     License: © 2025 Maxim. All Rights Reserved.
 */
 
 const siteConfig = {
+    // [Core Settings]
+    language: 'ko',
+    
+    // [Page Settings]
     canvas_effect: 'starsEffect',
     canvas_overlay: 'dotted',
     canvas_image_type: 'cover',
@@ -15,15 +20,13 @@ const siteConfig = {
     canvas_image_format: 'jpg',
     canvas_indicators: true,
 
+    // [Header Icons] Removed 'Contact'
     icon_buttons: [
-        { name: 'Location', icon: 'location_on', url: '#location' },
-        { name: 'Contact', icon: 'contact_support', url: '#contact' }
-    ],
-    
-    API_BASE_PATH: 'https://agency.maxim.kr/api',
-    TURNSTILE_SITE_KEY: '0x4AAAAAACA4Lf2CF7viYhbJ',
+        { name: 'Location', icon: 'location_on', url: '#location' }
+    ]
 };
 
+// Custom Effect: Stars (Migrated for V3)
 const starsEffect = {
     init: (headerElement) => {
         const canvas = document.createElement('canvas');
@@ -92,10 +95,11 @@ const starsEffect = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (typeof PE_V2 !== 'undefined') {
-        PE_V2.registerEffect('starsEffect', starsEffect);
-        PE_V2.init(siteConfig);
+    // V3 Initialization
+    if (typeof PE_V3 !== 'undefined') {
+        PE_V3.registerEffect('starsEffect', starsEffect);
+        PE_V3.init(siteConfig);
     } else {
-        console.error('Page Express V2 (page-v2.js) failed to load.');
+        console.error('Page Express V3 (page-v3.js) failed to load.');
     }
 });

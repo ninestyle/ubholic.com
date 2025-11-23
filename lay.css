@@ -1,11 +1,23 @@
 /*
-    Version: 2.1.0 (V2 Refactored)
-    Last Modified: 2025-11-14
+    Version: 3.0.0 (V3 Refactored)
+    Framework: User Styles (Tier 3)
+    Last Modified: 2025-11-23
     Author: Maxim
     License: © 2025 Maxim. All Rights Reserved.
 */
 
 :root {
+    /* [V3 Core Mapping] */
+    /* Mapping user theme colors to Core variables for consistency */
+    --ex-color-primary: #5A4C47;   /* Headings */
+    --ex-color-secondary: #8E7A73; /* Text Secondary */
+    --ex-color-accent: #EBC4B8;    /* Brand Color */
+    --ex-color-bg: #FFFFFF;        /* Background */
+    --ex-color-surface: #FFF8F5;   /* Surface/Secondary BG */
+    --ex-color-text: #6D5D57;      /* Body Text */
+    --ex-color-border: #F8E2DA;    /* Borders */
+
+    /* [User Variables] */
     --bg-primary: #FFFFFF;
     --bg-secondary: #FFF8F5;
     --bg-navbar-animated: linear-gradient(45deg, #fff8f5, #ffffff, #fff8f5, #fdeee8);
@@ -43,6 +55,16 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        /* [V3 Core Mapping - Dark] */
+        --ex-color-primary: #FFFFFF;
+        --ex-color-secondary: #D4C9C6;
+        --ex-color-accent: #F5D2C7;
+        --ex-color-bg: #2C2725;
+        --ex-color-surface: #3B3431;
+        --ex-color-text: #F2EBE8;
+        --ex-color-border: #5A4C47;
+
+        /* [User Variables - Dark] */
         --bg-primary: #2C2725;
         --bg-secondary: #3B3431;
         --bg-navbar-animated: linear-gradient(45deg, #3b3431, #2c2725, #3b3431, #4a403c);
@@ -72,7 +94,6 @@
         --ce-canvas-rgb: 245, 210, 199;
     }
 }
-
 
 .pe-header__title {
     font-family: 'Playfair Display', serif;

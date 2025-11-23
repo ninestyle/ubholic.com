@@ -2,7 +2,6 @@
     "_default": {
         "logo_text": "UBHOLIC",
         "home_subtitle": "Premium Esthetic",
-        "footer_credit_text": "",
         "location_branch_01_name": "전주본점",
         "location_branch_01_address": "전주시 완산구 소태정3길 16-1",
         "location_branch_01_phone": "0507-1336-1520",
@@ -150,6 +149,9 @@
     },
     "en": {
         "site_title": "UBHOLIC - Premium Esthetic",
+        "meta_description": "UBHOLIC is a premium esthetic that provides true rest and vitality to your body and mind with professional care tailored to each customer.",
+        "og_title": "UBHOLIC - Premium Esthetic",
+        "og_description": "We provide vitality and beauty to your daily life with professional care.",
         "overview_title": "Comfort and Beauty that Permeates Your Daily Life",
         "overview_desc": "UBHOLIC is a premium esthetic that provides true rest and vitality to your body and mind with professional care tailored to each customer.",
         "skincare_title": "Skincare",
@@ -171,6 +173,9 @@
     },
     "ko": {
         "site_title": "유비홀릭 - 프리미엄 에스테틱",
+        "meta_description": "유비홀릭(UBHOLIC)은 전문적인 관리로 당신의 일상에 활력과 아름다움을 선사하는 프리미엄 에스테틱입니다.",
+        "og_title": "유비홀릭 - 프리미엄 에스테틱",
+        "og_description": "전문적인 관리로 당신의 일상에 활력과 아름다움을 선사합니다.",
         "overview_title": "일상에 스며드는 편안함과 아름다움",
         "overview_desc": "유비홀릭은 고객 한 분 한 분에게 맞춘 전문적인 케어로 몸과 마음에 진정한 휴식과 활력을 선사하는 프리미엄 에스테틱입니다.",
         "skincare_title": "피부관리",
