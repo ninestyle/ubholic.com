@@ -24,7 +24,6 @@ const siteConfig = {
     ]
 };
 
-// [커스텀 이펙트] 별 내리는 효과 (전체 코드 복구)
 const starsEffect = {
     init: (headerElement) => {
         try {
@@ -109,26 +108,21 @@ const starsEffect = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. V3 라이브러리 로드 확인
     if (typeof PE_V3 !== 'undefined') {
         try {
-            // 2. 이펙트 등록 및 초기화
             PE_V3.registerEffect('starsEffect', starsEffect);
             PE_V3.init(siteConfig);
         } catch (e) {
             console.error('PE_V3 Init Error:', e);
-            forceShowContent(); // 에러 발생 시 강제 노출
+            forceShowContent();
         }
     } else {
         console.error('Page Express V3 (page-v3.js) failed to load.');
-        forceShowContent(); // 라이브러리 없음 시 강제 노출
+        forceShowContent();
     }
-
-    // [안전장치] 1초 뒤에도 화면이 안 뜨면 강제로 보이게 함
     setTimeout(forceShowContent, 1000);
 });
 
-// 콘텐츠 강제 노출 함수
 function forceShowContent() {
     document.querySelectorAll('.js-fade-in').forEach(el => {
         el.style.opacity = '1';
